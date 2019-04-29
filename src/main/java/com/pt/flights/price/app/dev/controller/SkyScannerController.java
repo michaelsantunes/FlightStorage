@@ -37,7 +37,7 @@ public class SkyScannerController implements SkyScannerInterface, APICommonExter
     }
 
     /**
-     * Search in SkyScanner API
+     * Search on SkyScanner API
      * @return Skyscanner Class
      */
     @Override
