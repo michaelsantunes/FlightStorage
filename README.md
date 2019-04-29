@@ -1,2 +1,2 @@
-# FlightStorage
-API prototype to find flight prices on the web. The final goal is store  the maximum data possible and in the future to use with machine learning to predict prices.
+# Prototype API
+The purpose of this project is to store flight prices, using externals APIs, during a year. Searching datas from specific intervals of dates, for a better analysis of the results. After that,  to use machine learning predict flight prices.
