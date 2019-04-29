@@ -66,10 +66,12 @@ public class JobListDate {
                     maxVerification = true;
                 }
             }
+            Collections.sort(scheduleByDays, Comparator.comparing(JobDate::getIdScheduleByDay));
+            return scheduleByDays;
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, e.toString());
         }
-        Collections.sort(scheduleByDays, Comparator.comparing(JobDate::getIdScheduleByDay));
-        return scheduleByDays;
+        
+        return null;
     }
 }
