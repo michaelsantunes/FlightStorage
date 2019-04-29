@@ -16,5 +16,4 @@ OPO x VIE - Departur Date: 2019-05-01 | Return Date: 2019-05-10
 
 IATA CODE ( OPO )
 
-
-In this demo version i use rapidapi skyscanner.
+This demo version use rapidapi skyscanner.
