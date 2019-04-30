@@ -19,12 +19,12 @@ public class AirLineController {
     @Autowired
     private AirLineImp airLineImp;
 
-    @GetMapping(value = "find/all")
+    @GetMapping
     public ResponseEntity<Page<AirLine>> findAll(Pageable pageable) {
         return new REST<AirLine>().contentPageableCollection(airLineImp.findAll(pageable));
     }
 
-    @GetMapping(value = "find/by/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<AirLine> findById(@PathVariable(value = "id") Long id) {
         return new REST<AirLine>().contentEntity(airLineImp.findById(id));
     }
