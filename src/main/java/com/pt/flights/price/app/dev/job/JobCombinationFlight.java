@@ -57,7 +57,9 @@ public class JobCombinationFlight implements JobCombinationFlightInterface {
      */
     public synchronized void findCombinationFlight(ThirdTaskParameter thirdTaskParameter) {
         List<CombinationFlight> flightList = new ArrayList<>();
+        //inital date
         Date d1 = java.sql.Date.valueOf(thirdTaskParameter.getJobDate().getInitialRange());
+        //final date
         Date d2 = java.sql.Date.valueOf(thirdTaskParameter.getJobDate().getFinalRange());
         flightList = combinationFlight.findCombinationFlightByInitialAndFinalDate(d1, d2);
         int countDown = 0;
@@ -68,7 +70,6 @@ public class JobCombinationFlight implements JobCombinationFlightInterface {
                 countDown++;
                 //countdown to avoid many API access
                 if ( countDown % 100 == 0 ) {
-                    System.out.println("COUNT DOWN " + countDown);
                     TimeUnit.MINUTES.sleep(3);
                 }
             } catch (Exception e) {
