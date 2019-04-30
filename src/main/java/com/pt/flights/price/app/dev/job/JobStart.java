@@ -44,9 +44,10 @@ public class JobStart {
     public List<JobDate> firstTask() throws Exception {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        List<JobDate> scheduleByDays;
+        List<JobDate> scheduleByDays =  new ArrayList<>();
         Future<List<JobDate>> future = executorService.submit(() -> jobCommon.getJobsByDay(countDownLatch));
-        scheduleByDays = future.get();
+        if ( !future.get().isEmpty() ) 
+            scheduleByDays = future.get();             
         try {
             countDownLatch.await();
         } catch (InterruptedException e) {
@@ -69,7 +70,9 @@ public class JobStart {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         CountDownLatch countDownLatch = new CountDownLatch(1);
         Future<Set<List<Integer>>> future = executorService.submit(() -> jobCommon.getFirstAndSecondIndex(total, percentage, countDownLatch));
-        Set<List<Integer>> indexSet = future.get();
+        Set<List<Integer>> indexSet = new HashSet();
+        if ( !future.get().isEmpty() ) 
+            indexSet = future.get();
         try {
             countDownLatch.await();
         } catch (InterruptedException e) {
