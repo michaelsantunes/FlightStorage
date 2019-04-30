@@ -25,16 +25,10 @@ public class JobCombinationFlight implements JobCombinationFlightInterface {
 
     @Autowired
     private CombinationFlightImp flight;
-
     @Autowired
     private SkyScannerPriceImp skyScannerPriceImp;
-
     @Autowired
     private CombinationFlightImp combinationFlight;
-
-    private List<Long> integerList = new ArrayList<>();
-
-    private List<Long> longs = new ArrayList<>();
 
     /**
      * With interval index, get date from this interval to used with filter in skyscanner api.
