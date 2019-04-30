@@ -44,8 +44,8 @@ public class JobCommon {
         } catch (Exception e ) {
             LOGGER.log(Level.SEVERE, e.toString());
         }
-
-        return list;
+        
+         return list;
     }
 
     /**
