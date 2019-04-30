@@ -9,5 +9,4 @@ public interface CombinationFlightInterface {
     void saveFrom(CombinationPrice combinationPrice, SearchModel searchModel, SkyScanner skyScanner, SkyScannerQuotes skyScannerQuotes, String code) throws Exception;
     void saveTo(CombinationPrice combinationPrice, SearchModel searchModel, SkyScanner skyScanner, SkyScannerQuotes skyScannerQuotes,  String code) throws Exception;
     void savePrice(ModelSave modelSavePrice) throws Exception;
-
 }
