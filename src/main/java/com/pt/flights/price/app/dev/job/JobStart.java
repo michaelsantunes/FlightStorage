@@ -69,8 +69,8 @@ public class JobStart {
     public Set<List<Integer>> secondTask(double total, double percentage) throws Exception {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        Future<Set<List<Integer>>> future = executorService.submit(() -> jobCommon.getFirstAndSecondIndex(total, percentage, countDownLatch));
         Set<List<Integer>> indexSet = new HashSet();
+        Future<Set<List<Integer>>> future = executorService.submit(() -> jobCommon.getFirstAndSecondIndex(total, percentage, countDownLatch));
         if ( !future.get().isEmpty() ) 
             indexSet = future.get();
         try {
