@@ -5,7 +5,9 @@ import org.springframework.data.domain.Pageable;
 
 import java.io.Serializable;
 
+//crud interface
 public interface DBCommonInterface<T1, T2, T3 extends Serializable> {
+    
     T1 save(T1 entity);
     public T1 saveIfNotExist(T1 entity);
     T1 update(T1 entity);
@@ -15,4 +17,5 @@ public interface DBCommonInterface<T1, T2, T3 extends Serializable> {
     boolean deleteAll();
     T2 countByCriteriaQueryWithoutParameter() throws InterruptedException;
     T2 countByCriteriaQueryGreaterThanOrEqualToDate(T3 entity) throws InterruptedException;
+    
 }
