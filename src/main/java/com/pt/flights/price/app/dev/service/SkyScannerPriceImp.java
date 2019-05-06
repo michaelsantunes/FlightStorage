@@ -23,9 +23,9 @@ public class SkyScannerPriceImp implements CombinationFlightInterface {
     @Autowired
     private AirLineImp airLineImp;
     @Autowired
-    Common common;
+    private Common common;
     @Autowired
-    CombinationPriceImp combinationPriceImp;
+    private CombinationPriceImp combinationPriceImp;
 
     private CombinationFlight mainParameter;
     private ThirdTaskParameter thirdTaskParameter;
