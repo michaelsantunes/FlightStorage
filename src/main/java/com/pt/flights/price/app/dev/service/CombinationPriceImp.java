@@ -23,19 +23,15 @@ public class CombinationPriceImp implements DBCommonInterface<CombinationPrice, 
     private final Logger logger = LoggerFactory.getLogger(CombinationPriceImp.class);
 
     @Autowired
-    AirLineImp airLine;
-
+    private AirLineImp airLine;
     @Autowired
-    CombinationFlightImp combinationFlightImplements;
-
+    private CombinationFlightImp combinationFlightImplements;
     @Autowired
-    CurrencyExchangeController currency;
-
+    private CurrencyExchangeController currency;
     @Autowired
-    PropertiesConfiguration propertiesConfiguration;
-
+    private PropertiesConfiguration propertiesConfiguration;
     @Autowired
-    CombinationPriceRepository combinationPriceRepository;
+    private CombinationPriceRepository combinationPriceRepository;
 
     @Override
     public CombinationPrice save(CombinationPrice combinationPrice) {
