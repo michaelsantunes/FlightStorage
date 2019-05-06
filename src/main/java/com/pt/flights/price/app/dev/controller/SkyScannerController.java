@@ -20,7 +20,7 @@ public class SkyScannerController implements SkyScannerInterface, APICommonExter
     @Autowired
     private PropertiesConfiguration propertiesConfiguration;
 
-    SkyScannerParameter parameter;
+    private SkyScannerParameter parameter;
 
     private String url;
     private String headerName;
