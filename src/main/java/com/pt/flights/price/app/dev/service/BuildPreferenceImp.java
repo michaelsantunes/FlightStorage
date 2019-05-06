@@ -18,11 +18,11 @@ public class BuildPreferenceImp {
     private final static Logger LOGGER = Logger.getLogger(BuildPreferenceImp.class.getName());
 
     @Autowired
-    AirPortImp airPortImplements;
+    private AirPortImp airPortImplements;
     @Autowired
-    CombinationFlightImp combinationFlightImplements;
+    private CombinationFlightImp combinationFlightImplements;
     @Autowired
-    IataDefault iataDefault;
+    private IataDefault iataDefault;
 
     /**
      * Creating a flight preference list between initial date and final date. Current date more one year.
