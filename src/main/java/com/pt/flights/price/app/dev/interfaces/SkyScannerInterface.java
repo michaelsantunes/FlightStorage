@@ -5,5 +5,4 @@ import com.pt.flights.price.app.dev.model.SkyScannerParameter;
 public interface SkyScannerInterface {
     
     void SkyScannerController(SkyScannerParameter skyScannerParameter);
-    
 }
