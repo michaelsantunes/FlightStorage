@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface AirPortRepository extends JpaRepository<AirPort, Long> {
+    
     AirPort findByIata(String iata);
     List<AirPort> findByPersonalPreferenceIsTrue();
 }
