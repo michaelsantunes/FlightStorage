@@ -15,8 +15,10 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class SkyScannerController implements SkyScannerInterface, APICommonExternalInterface<SkyScannerParameter, SkyScanner, String> {
 
+    //get prices from RAPIDAPI SKYSCANNER
+    
     @Autowired
-    PropertiesConfiguration propertiesConfiguration;
+    private PropertiesConfiguration propertiesConfiguration;
 
     SkyScannerParameter parameter;
 
