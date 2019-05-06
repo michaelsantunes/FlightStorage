@@ -33,10 +33,10 @@ public class CurrencyExchangeController {
         List<Float> currencyList = new ArrayList<>();
         String header_name = (String) propertiesConfiguration.getGenericProperties(EnumKey.RAPID_HEADER_NAME.getKeyValue());
         String header_key = (String) propertiesConfiguration.getGenericProperties(EnumKey.RAPID_HEADER_KEY.getKeyValue());
-        String dollar = (String) propertiesConfiguration.getGenericProperties(EnumURL.URL_CURRENCY_DOLAR.getKeyValue());
-        String real = (String) propertiesConfiguration.getGenericProperties(EnumURL.URL_CURRENCY_REAL.getKeyValue());
-        currencyList.add(getValueFromAPI(header_name, header_key, dollar));
-        currencyList.add(getValueFromAPI(header_name, header_key, real));
+        String dollarURL = (String) propertiesConfiguration.getGenericProperties(EnumURL.URL_CURRENCY_DOLAR.getKeyValue());
+        String realURL = (String) propertiesConfiguration.getGenericProperties(EnumURL.URL_CURRENCY_REAL.getKeyValue());
+        currencyList.add(getValueFromAPI(header_name, header_key, dollarURL));
+        currencyList.add(getValueFromAPI(header_name, header_key, realURL));
         return currencyList;
     }
 
