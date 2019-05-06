@@ -29,7 +29,6 @@ public class CombinationFlightImp implements DBCommonInterface<CombinationFlight
 
     @Autowired
     private CombinationFlightRepository repository;
-
     @Autowired
     private JobListDate jobByDayImplements;
 
