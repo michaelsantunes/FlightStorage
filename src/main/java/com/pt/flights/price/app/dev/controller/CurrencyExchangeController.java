@@ -19,9 +19,12 @@ import java.util.List;
 public class CurrencyExchangeController {
 
     @Autowired
-    PropertiesConfiguration propertiesConfiguration;
+    private PropertiesConfiguration propertiesConfiguration;
 
+    //Get currency exchange from RAPIDAPI.
+    
     /**
+     * Build URL
      * Get currency exchange
      * @return
      * @throws Exception
