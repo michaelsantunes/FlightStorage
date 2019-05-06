@@ -16,6 +16,5 @@ public interface DBCommonInterface<T1, T2, T3 extends Serializable> {
     boolean deleteById(T2 id);
     boolean deleteAll();
     T2 countByCriteriaQueryWithoutParameter() throws InterruptedException;
-    T2 countByCriteriaQueryGreaterThanOrEqualToDate(T3 entity) throws InterruptedException;
-    
+    T2 countByCriteriaQueryGreaterThanOrEqualToDate(T3 entity) throws InterruptedException;   
 }
