@@ -16,6 +16,7 @@ import java.util.List;
 @Repository
 @Transactional
 public interface CombinationFlightRepository extends JpaRepository<CombinationFlight, Long> {
+    
     CombinationFlight findFirstOneInitialDateByInitialDateGreaterThanEqualOrderByInitialDate(Date parameter);
     CombinationFlight findTopFinalDateByFinalDateGreaterThanEqualOrderByFinalDateDesc(Date parameter);
     List<CombinationFlight> findByInitialDateGreaterThanEqualAndFinalDateLessThanEqual(Date initialDate, Date finalDate);
