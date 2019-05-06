@@ -16,7 +16,7 @@ import java.util.List;
 public class EmailCombinationImp implements DBCommonInterface<EmailCombination, Long, Date> {
 
     @Autowired
-    EmailCombinationRepository emailPreferenceRepository;
+    private EmailCombinationRepository emailPreferenceRepository;
 
     @Override
     public EmailCombination save(EmailCombination entity) {
