@@ -17,9 +17,7 @@ import java.util.List;
 public class AirPortImp implements DBCommonInterface<AirPort, Long, Date> {
 
     @Autowired
-    AirPortRepository airPortRepository;
-
-
+    private AirPortRepository airPortRepository;
 
     @Override
     public AirPort save(AirPort entity) {
