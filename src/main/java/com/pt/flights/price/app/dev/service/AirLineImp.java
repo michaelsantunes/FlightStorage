@@ -18,7 +18,7 @@ import java.util.Optional;
 public class AirLineImp implements DBCommonInterface<AirLine, Long, Date> {
 
     @Autowired
-    AirLineRepository airLineRepository;
+    private AirLineRepository airLineRepository;
 
     @Override
     public AirLine save(AirLine entity) {
