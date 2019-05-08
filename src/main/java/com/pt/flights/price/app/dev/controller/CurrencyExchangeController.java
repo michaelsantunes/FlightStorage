@@ -37,6 +37,7 @@ public class CurrencyExchangeController {
         String realURL = (String) propertiesConfiguration.getGenericProperties(EnumURL.URL_CURRENCY_REAL.getKeyValue());
         currencyList.add(getValueFromAPI(header_name, header_key, dollarURL));
         currencyList.add(getValueFromAPI(header_name, header_key, realURL));
+        
         return currencyList;
     }
 
@@ -54,6 +55,7 @@ public class CurrencyExchangeController {
         http.setRequestProperty(header_name, header_key);
         JsonParser jp = new JsonParser();
         JsonElement je = jp.parse(new InputStreamReader((InputStream) http.getContent()));
+        
         return je.getAsFloat();
     }
 }
